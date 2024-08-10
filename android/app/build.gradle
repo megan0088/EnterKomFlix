@@ -1,0 +1,62 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
+    id "dev.flutter.flutter-gradle-plugin"
+}
+
+def localProperties = new Properties()
+def localPropertiesFile = rootProject.file("local.properties")
+if (localPropertiesFile.exists()) {
+    localPropertiesFile.withReader("UTF-8") { reader ->
+        localProperties.load(reader)
+    }
+}
+
+def flutterVersionCode = localProperties.getProperty("flutter.versionCode")
+if (flutterVersionCode == null) {
+    flutterVersionCode = "1"
+}
+
+def flutterVersionName = localProperties.getProperty("flutter.versionName")
+if (flutterVersionName == null) {
+    flutterVersionName = "1.0"
+}
+
+android {
+    namespace = "com.example.movie_app"  // Replace with your app's ID
+    compileSdkVersion 34  // Explicitly set the compile SDK version to 34
+    ndkVersion = flutter.ndkVersion  
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        applicationId = "com.example.movie_app"  // Replace with your app's ID
+        minSdkVersion 21  // Explicitly set minSdkVersion to 21
+        targetSdkVersion 34  // Explicitly set targetSdkVersion to 34
+        versionCode flutterVersionCode.toInteger()  // Use the version code from local properties
+        versionName flutterVersionName  // Use the version name from local properties
+    }
+
+    buildTypes {
+        release {
+            // TODO: Add your signing configuration for release builds.
+            // For now, using debug signing config for `flutter run --release` to work.
+            signingConfig signingConfigs.debug
+        }
+    }
+
+    // Add this block to handle Android 13+ permissions
+    packagingOptions {
+        resources {
+            excludes += 'META-INF/*'
+        }
+    }
+}
+
+flutter {
+    source = "../.."  // Path to your Flutter source
+}

@@ -1,0 +1,72 @@
+name: movie_app
+description: "A new Flutter project."
+
+# Tidak akan mempublikasikan paket ini ke pub.dev
+publish_to: 'none'
+
+# Versi aplikasi dengan format major.minor.patch+build
+version: 1.0.0+1
+
+environment:
+  # Versi SDK Dart yang dibutuhkan
+  sdk: '>=3.4.4 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter # Menggunakan SDK Flutter untuk dependensi ini
+
+  # Paket untuk ikon Cupertino
+  cupertino_icons: ^1.0.6
+
+  # Paket untuk melakukan permintaan HTTP
+  http: ^1.2.2
+
+  # Paket untuk manajemen status dan routing
+  get: ^4.6.5
+
+  # Paket untuk manajemen status
+  provider: ^6.0.1
+
+  # Paket untuk menampilkan gambar dari jaringan dengan caching
+  cached_network_image: ^3.4.0
+
+  # Paket untuk mendapatkan path direktori perangkat
+  path_provider: ^2.0.11
+
+  # Paket untuk mengelola izin aplikasi
+  permission_handler: ^11.3.1
+
+  # Paket untuk SQLite database
+  sqflite: ^2.0.0+4
+
+  # Paket untuk manipulasi path
+  path: any
+
+  # Paket untuk membuat slider carousel
+  carousel_slider: ^4.2.1
+
+  # Paket untuk menyimpan data preferensi sederhana
+  shared_preferences: ^2.1.0
+
+  # Paket untuk melakukan permintaan HTTP dengan fitur tambahan
+  dio: ^5.5.0+1
+
+  # Paket untuk menampilkan animasi Lottie
+  lottie: ^3.1.2
+
+dev_dependencies:
+  # Dependensi untuk testing Flutter
+  flutter_test:
+    sdk: flutter
+
+  # Paket untuk linting kode Flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  # Menentukan bahwa proyek menggunakan desain Material
+  uses-material-design: true
+
+  # Menyertakan file animasi Lottie di folder assets
+  assets:
+    - assets/Animation - 1723002189873.json
+    - assets/Animation - 1723085307955.json
