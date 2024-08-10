@@ -1,16 +1,20 @@
-# movie_app
+Dibuat untuk test Enter Komputer
+terdiri dari :
+- Screen ``User Profile``
+(Login User / Guest User) boleh pilih salah satu.
+terdiri dari :
+a. Watchlist Movie
+b. Favorite Movie
 
-A new Flutter project.
+- Screen ``Home``
+terdiri dari :
+a. State Now Playing (LIMIT 6 Movie showing)
+b. State Popular (LIMIT 20 Movie showing)
+b. Add to Watchlist (button)
+c. Add to Favorite (button)
+d. Image save to Local Storage
 
-## Getting Started
+- Screen ``Detail Movie``
+a. Detail sebuah Movie (redirect from home screen)
+b. Similar Movie (di ambil dari Genre yang sama)
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
