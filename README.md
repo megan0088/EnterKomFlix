@@ -18,3 +18,6 @@ d. Image save to Local Storage
 a. Detail sebuah Movie (redirect from home screen)
 b. Similar Movie (di ambil dari Genre yang sama)
 
+Note:
+1. do run pub get on terminal before trying to launch the code
+2. user all granted access, just type random user thing for accessing home screen and user screen 
